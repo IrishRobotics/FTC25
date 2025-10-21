@@ -19,8 +19,8 @@ public class BrodysFIRSTOpMode extends OpMode {
         backLeftMotor = hardwareMap.get(DcMotor.class, "backLeftDrive");
         backRightMotor = hardwareMap.get(DcMotor.class, "backRightDrive");
 
-        frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        frontLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        backLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
 
         telemetry.addData("Status", "Initialised");
         telemetry.update();
