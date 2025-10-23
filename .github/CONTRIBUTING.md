@@ -4,7 +4,7 @@ The following is a set of guidelines for contributing to the 2025 Irish Robotics
 
 ## How can I contribute?
 
-If you are on the team come talk to Nick. If you are not on the team your help is not needed.
+If you are a team member, please coordinate with Nick before making contributions. External contributions are not being accepted at this time.
 
 ## Pull Request Process
 
