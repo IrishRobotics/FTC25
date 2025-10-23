@@ -8,7 +8,9 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+import org.firstinspires.ftc.teamcode.commands.RunIntake;
 import org.firstinspires.ftc.teamcode.commands.RunShooter;
+import org.firstinspires.ftc.teamcode.subsystems.Intake;
 import org.firstinspires.ftc.teamcode.subsystems.Shooter;
 
 @TeleOp(name = "PrimaryOpMode", group= "NormalOpModes")
@@ -16,6 +18,7 @@ public class PrimaryOpMode extends OpMode {
     private Motor fL, fR, bL, bR;
     private MecanumDrive drive;
     private Shooter shooter;
+    private Intake intake;
     private GamepadEx driverOp;
 
     private GamepadEx coOp;
@@ -33,7 +36,10 @@ public class PrimaryOpMode extends OpMode {
 
         shooter = new Shooter(hardwareMap, "shooterMotor");
 
+        intake = new Intake(hardwareMap, "intakeMotor");
+
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(new RunShooter(shooter, 1));
+        coOp.getGamepadButton(GamepadKeys.Button.B).whileHeld(new RunIntake(intake, 0.5));
     }
 
     @Override
