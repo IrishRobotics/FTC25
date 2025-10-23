@@ -1,6 +1,6 @@
 # Contributing to the IrishRobotics FTC2025
 
-The following is a set of guidelines for contributing the 2025 Irish Robotics FTC code.  
+The following is a set of guidelines for contributing to the 2025 Irish Robotics FTC code.  
 
 ## How can I contribute?
 
