@@ -5,6 +5,7 @@ import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.arcrobotics.ftclib.gamepad.GamepadKeys;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.Constants;
 import org.firstinspires.ftc.teamcode.commands.RunShooter;
 import org.firstinspires.ftc.teamcode.commands.UserDrive;
 import org.firstinspires.ftc.teamcode.subsystems.Drivetrain;
@@ -23,10 +24,17 @@ public class PrimaryOpMode extends CommandOpMode {
         driverOp = new GamepadEx(gamepad1);
         coOp = new GamepadEx(gamepad2);
 
-        drivetrain = new Drivetrain(hardwareMap, "frontLeftDrive", "frontRightDrive", "backLeftDrive", "backRightDrive");
+        drivetrain = new Drivetrain(
+                hardwareMap,
+                Constants.Drivetrain.flMotorName,
+                Constants.Drivetrain.frMotorName,
+                Constants.Drivetrain.blMotorName,
+                Constants.Drivetrain.brMotorName
+        );
         drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
 
-        shooter = new Shooter(hardwareMap, "shooterMotor");
-        coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(new RunShooter(shooter, 1));
+        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName);
+        coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
+                new RunShooter(shooter, Constants.Shooter.defaultSpeed));
     }
 }
