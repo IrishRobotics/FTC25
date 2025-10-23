@@ -4,7 +4,7 @@ The following is a set of guidelines for contributing the 2025 Irish Robotics FT
 
 ## How can I contribute?
 
-If you are on the team come talk to nick. If you are not on the team your help is not needed.
+If you are on the team come talk to Nick. If you are not on the team your help is not needed.
 
 ## Pull Request Process
 
