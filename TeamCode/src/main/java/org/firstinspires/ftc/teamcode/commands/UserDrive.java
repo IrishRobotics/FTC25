@@ -20,7 +20,7 @@ public class UserDrive extends CommandBase {
         drivetrain.move(
                 gamepad.getLeftX(),
                 gamepad.getLeftY(),
-                gamepad.getRightY()
+                gamepad.getRightX()
         );
     }
 
