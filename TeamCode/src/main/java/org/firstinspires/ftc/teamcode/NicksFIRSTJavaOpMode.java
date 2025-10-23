@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name="Nick's OpMode", group="Example OpMode")
+@TeleOp(name = "Nick's OpMode", group = "Example OpMode")
 public class NicksFIRSTJavaOpMode extends OpMode {
     private DcMotor frontLeftMotor;
     private DcMotor frontRightMotor;
@@ -48,7 +48,7 @@ public class NicksFIRSTJavaOpMode extends OpMode {
     }
 
     @Override
-    public  void stop() {
+    public void stop() {
         telemetry.addData("Status", "Stopped");
         telemetry.update();
     }

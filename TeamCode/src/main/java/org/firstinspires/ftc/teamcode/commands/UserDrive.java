@@ -9,7 +9,7 @@ public class UserDrive extends CommandBase {
     private final Drivetrain drivetrain;
     private final GamepadEx gamepad;
 
-    public UserDrive(Drivetrain drivetrain, GamepadEx gamepad){
+    public UserDrive(Drivetrain drivetrain, GamepadEx gamepad) {
         this.drivetrain = drivetrain;
         this.gamepad = gamepad;
     }

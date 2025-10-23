@@ -10,7 +10,7 @@ import org.firstinspires.ftc.teamcode.commands.UserDrive;
 import org.firstinspires.ftc.teamcode.subsystems.Drivetrain;
 import org.firstinspires.ftc.teamcode.subsystems.Shooter;
 
-@TeleOp(name = "PrimaryOpMode", group= "NormalOpModes")
+@TeleOp(name = "PrimaryOpMode", group = "NormalOpModes")
 public class PrimaryOpMode extends CommandOpMode {
     private Shooter shooter;
     private Drivetrain drivetrain;

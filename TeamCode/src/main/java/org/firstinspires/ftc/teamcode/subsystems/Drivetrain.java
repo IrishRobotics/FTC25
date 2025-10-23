@@ -9,7 +9,7 @@ public class Drivetrain extends SubsystemBase {
     private final Motor fL, fR, bL, bR;
     private final MecanumDrive drive;
 
-    public Drivetrain(HardwareMap hardwareMap, String flName, String frName, String blName, String brName){
+    public Drivetrain(HardwareMap hardwareMap, String flName, String frName, String blName, String brName) {
         fL = new Motor(hardwareMap, flName);
         fR = new Motor(hardwareMap, frName);
         bL = new Motor(hardwareMap, blName);

@@ -5,7 +5,7 @@ import com.arcrobotics.ftclib.hardware.motors.Motor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Shooter extends SubsystemBase {
-    private Motor shooterMotor;
+    private final Motor shooterMotor;
 
     public Shooter(HardwareMap map, String motorName) {
         shooterMotor = new Motor(map, motorName);
