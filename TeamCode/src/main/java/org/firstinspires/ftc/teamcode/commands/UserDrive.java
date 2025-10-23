@@ -12,6 +12,7 @@ public class UserDrive extends CommandBase {
     public UserDrive(Drivetrain drivetrain, GamepadEx gamepad) {
         this.drivetrain = drivetrain;
         this.gamepad = gamepad;
+        addRequirements(drivetrain);
     }
 
     @Override
