@@ -1,11 +1,13 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.OpModes.learning;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name="Nick's OpMode", group="Example OpMode")
+@TeleOp(name = "Nick's OpMode", group = "Example OpMode")
+@Disabled
 public class NicksFIRSTJavaOpMode extends OpMode {
     private DcMotor frontLeftMotor;
     private DcMotor frontRightMotor;
@@ -48,7 +50,7 @@ public class NicksFIRSTJavaOpMode extends OpMode {
     }
 
     @Override
-    public  void stop() {
+    public void stop() {
         telemetry.addData("Status", "Stopped");
         telemetry.update();
     }

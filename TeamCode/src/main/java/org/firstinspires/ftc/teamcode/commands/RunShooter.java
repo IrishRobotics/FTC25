@@ -5,23 +5,18 @@ import com.arcrobotics.ftclib.command.CommandBase;
 import org.firstinspires.ftc.teamcode.subsystems.Shooter;
 
 public class RunShooter extends CommandBase {
-    private Shooter subsystem;
-    private double speed;
+    private final Shooter subsystem;
+    private final double speed;
 
     public RunShooter(Shooter _subsystem, double _speed) {
-       subsystem = _subsystem;
-       addRequirements(subsystem);
-       speed = _speed;
+        subsystem = _subsystem;
+        addRequirements(subsystem);
+        speed = _speed;
     }
 
     @Override
     public void initialize() {
         subsystem.run(speed);
-    }
-
-    @Override
-    public boolean isFinished() {
-        return false;
     }
 
     @Override
