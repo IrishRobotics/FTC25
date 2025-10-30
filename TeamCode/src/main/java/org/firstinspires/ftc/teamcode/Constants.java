@@ -12,4 +12,10 @@ public final class Constants {
         public static final String shooterMotorName = "shooterMotor";
         public static final double defaultSpeed = 1;
     }
+
+    public static class Intake {
+        public static final String intakeMotorName = "intakeMotor";
+        public static final String rampMotorName = "rampMotor";
+        public static final double defaultSpeed = 0.5;
+    }
 }
