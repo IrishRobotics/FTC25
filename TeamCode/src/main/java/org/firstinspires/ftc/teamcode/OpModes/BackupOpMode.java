@@ -34,7 +34,7 @@ public class BackupOpMode extends CommandOpMode {
         drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
         register(drivetrain);
 
-        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName);
+        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorName);
         register(shooter);
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
                 new RunShooter(shooter, Constants.Shooter.defaultSpeed));

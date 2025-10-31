@@ -42,4 +42,13 @@ Subsystem that runs launcher
 ### Commands
 
 - RunShooter
-  - Runs shooter motors in raw mode with the specified power
+  - Runs shooter motors and ramp motors in raw mode with the specified power
+
+## Intake
+
+Subsystem that runs intake
+
+### Commands
+
+- RunIntake
+  - Runs intake motor in raw mode with the specified power
