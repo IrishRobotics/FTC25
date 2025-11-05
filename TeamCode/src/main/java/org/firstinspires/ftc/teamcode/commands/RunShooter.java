@@ -6,17 +6,18 @@ import org.firstinspires.ftc.teamcode.subsystems.Shooter;
 
 public class RunShooter extends CommandBase {
     private final Shooter subsystem;
-    private final double speed;
+    private final double shooterSpeed, rampSpeed;
 
-    public RunShooter(Shooter _subsystem, double _speed) {
+    public RunShooter(Shooter _subsystem, double _shooterSpeed, double _rampSpeed) {
         subsystem = _subsystem;
         addRequirements(subsystem);
-        speed = _speed;
+        shooterSpeed = _shooterSpeed;
+        rampSpeed = _rampSpeed;
     }
 
     @Override
     public void initialize() {
-        subsystem.run(speed);
+        subsystem.run(shooterSpeed, rampSpeed);
     }
 
     @Override

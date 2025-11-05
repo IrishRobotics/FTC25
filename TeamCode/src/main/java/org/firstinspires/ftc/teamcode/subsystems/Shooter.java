@@ -14,11 +14,12 @@ public class Shooter extends SubsystemBase {
         rampMotor.setRunMode(Motor.RunMode.RawPower);
     }
 
-    public void run(double speed) {
+    public void run(double shooterSpeed, double rampSpeed) {
         // Clamp speed to valid motor range [-1.0, 1.0]
-        double clampedSpeed = Math.max(-1.0, Math.min(1.0, speed));
+        double clampedSpeed = Math.max(-1.0, Math.min(1.0, shooterSpeed));
+        double _rampSpeed = Math.max(-1.0, Math.min(1.0, rampSpeed));
         shooterMotor.set(clampedSpeed);
-        rampMotor.set(clampedSpeed);
+        rampMotor.set(_rampSpeed);
     }
 
     public void stop() {

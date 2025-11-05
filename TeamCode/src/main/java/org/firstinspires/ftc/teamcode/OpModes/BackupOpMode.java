@@ -37,6 +37,6 @@ public class BackupOpMode extends CommandOpMode {
         shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorName);
         register(shooter);
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
-                new RunShooter(shooter, Constants.Shooter.defaultSpeed));
+                new RunShooter(shooter, Constants.Shooter.shooterSpeed, Constants.Shooter.rampSpeed));
     }
 }

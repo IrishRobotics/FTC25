@@ -41,7 +41,7 @@ public class PrimaryOpMode extends CommandOpMode {
         intake = new Intake(hardwareMap, Constants.Intake.intakeMotorName);
         register(intake);
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
-                new RunShooter(shooter, Constants.Shooter.defaultSpeed));
+                new RunShooter(shooter, Constants.Shooter.shooterSpeed, Constants.Shooter.rampSpeed));
         coOp.getGamepadButton(GamepadKeys.Button.B).whileHeld(
                 new RunIntake(intake, Constants.Intake.defaultSpeed));
     }
