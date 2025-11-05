@@ -29,11 +29,6 @@ Subsystem for driving
 - UserDrive
   - Drives with controls from gamepad
   - Stops moving when done
-  - Controls
-    - Left Stick
-      - Y: Forward
-      - X: Strafe
-    - Right Stick: X: Turn
 
 ## Shooter
 
@@ -43,3 +38,29 @@ Subsystem that runs launcher
 
 - RunShooter
   - Runs shooter motors in raw mode with the specified power
+  - Runs ramp motors in raw mode with the specified power
+
+## Intake
+
+Subsystem that runs intake
+
+### Commands
+
+- RunIntake
+  - Runs intake motor in raw mode with the specified power
+
+# Controls
+
+## Robot Driver
+ 
+- Left Stick
+  - Y: Forward
+  - X: Strafe
+- Right Stick: 
+  - X: Turn
+
+## Co-op Driver
+
+- A: Ramp and Shooter
+- B: Intake
+

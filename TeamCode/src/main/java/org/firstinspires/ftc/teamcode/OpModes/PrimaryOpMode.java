@@ -6,14 +6,17 @@ import com.arcrobotics.ftclib.gamepad.GamepadKeys;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Constants;
+import org.firstinspires.ftc.teamcode.commands.RunIntake;
 import org.firstinspires.ftc.teamcode.commands.RunShooter;
 import org.firstinspires.ftc.teamcode.commands.UserDrive;
 import org.firstinspires.ftc.teamcode.subsystems.Drivetrain;
+import org.firstinspires.ftc.teamcode.subsystems.Intake;
 import org.firstinspires.ftc.teamcode.subsystems.Shooter;
 
 @TeleOp(name = "PrimaryOpMode", group = "NormalOpModes")
 public class PrimaryOpMode extends CommandOpMode {
     private Shooter shooter;
+    private Intake intake;
     private Drivetrain drivetrain;
 
     private GamepadEx driverOp;
@@ -33,9 +36,13 @@ public class PrimaryOpMode extends CommandOpMode {
         );
         drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
         register(drivetrain);
-        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName);
+        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorName);
         register(shooter);
+        intake = new Intake(hardwareMap, Constants.Intake.intakeMotorName);
+        register(intake);
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
-                new RunShooter(shooter, Constants.Shooter.defaultSpeed));
+                new RunShooter(shooter, Constants.Shooter.shooterSpeed, Constants.Shooter.rampSpeed));
+        coOp.getGamepadButton(GamepadKeys.Button.B).whileHeld(
+                new RunIntake(intake, Constants.Intake.defaultSpeed));
     }
 }
