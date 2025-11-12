@@ -17,7 +17,7 @@ public class RunShooter extends CommandBase {
 
     @Override
     public void initialize() {
-        subsystem.run(shooterSpeed, rampSpeed);
+        subsystem.runBase(shooterSpeed, rampSpeed);
     }
 
     @Override

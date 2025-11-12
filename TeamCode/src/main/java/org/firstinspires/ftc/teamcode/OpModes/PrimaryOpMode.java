@@ -36,7 +36,7 @@ public class PrimaryOpMode extends CommandOpMode {
         );
         drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
         register(drivetrain);
-        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorName);
+        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorOneName, Constants.Shooter.rampMotorTwoName);
         register(shooter);
         intake = new Intake(hardwareMap, Constants.Intake.intakeMotorName);
         register(intake);
