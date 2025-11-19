@@ -19,7 +19,7 @@ public class Shooter extends SubsystemBase {
     public void runBase(double shooterSpeed, double rampSpeedOne) {
         // Clamp speed to valid motor range [-1.0, 1.0]
         double baseSpeed = Math.max(-1.0, Math.min(1.0, shooterSpeed));
-        double _rampSpeed = Math.max(-0.5, Math.min(0.5, rampSpeedOne));
+        double _rampSpeed = Math.max(-1.0, Math.min(1.0, rampSpeedOne));
         shooterMotor.set(baseSpeed);
         rampMotorOne.set(_rampSpeed);
         rampMotorTwo.set(_rampSpeed * -1.0);
