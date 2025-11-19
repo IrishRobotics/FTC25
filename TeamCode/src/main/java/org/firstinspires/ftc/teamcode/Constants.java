@@ -13,13 +13,13 @@ public final class Constants {
         private static final double length = 0.2873375;
         private static final  double width = 0.3444875;
         public static final Translation2d frontLeftLocation =
-                new Translation2d(length/2, 0.381);
+                new Translation2d(length/2, width/2);
         public static final Translation2d frontRightLocation =
-                new Translation2d(length/2, -0.381);
+                new Translation2d(length/2, -width/2);
         public static final Translation2d backLeftLocation =
-                new Translation2d(-length/2, 0.381);
+                new Translation2d(-length/2, width/2);
         public static final Translation2d backRightLocation =
-                new Translation2d(-length/2, -0.381);
+                new Translation2d(-length/2, -width/2);
 
         public static final MecanumDriveKinematics kinematics = new MecanumDriveKinematics
                 (

@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode.OpModes;
 import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.arcrobotics.ftclib.gamepad.GamepadKeys;
+import com.arcrobotics.ftclib.hardware.GyroEx;
+import com.arcrobotics.ftclib.hardware.RevIMU;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Constants;
@@ -24,12 +26,15 @@ public class BackupOpMode extends CommandOpMode {
         driverOp = new GamepadEx(gamepad1);
         coOp = new GamepadEx(gamepad2);
 
+        GyroEx gyroscope = new RevIMU(hardwareMap);
+
         drivetrain = new Drivetrain(
                 hardwareMap,
                 Constants.Drivetrain.flMotorName,
                 Constants.Drivetrain.frMotorName,
                 Constants.Drivetrain.blMotorName,
-                Constants.Drivetrain.brMotorName
+                Constants.Drivetrain.brMotorName,
+                gyroscope
         );
         drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
         register(drivetrain);
