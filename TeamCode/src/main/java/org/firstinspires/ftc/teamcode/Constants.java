@@ -13,7 +13,7 @@ public final class Constants {
         public static final String rampMotorOneName = "rampMotorOne";
         public static final String rampMotorTwoName = "rampMotorTwo";
         public static final double shooterSpeed = 1;
-        public static final double rampSpeed = 0.5;
+        public static final double rampSpeed = 1;
     }
 
     public static class Intake {

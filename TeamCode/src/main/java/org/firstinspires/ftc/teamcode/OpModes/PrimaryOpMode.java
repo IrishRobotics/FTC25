@@ -34,15 +34,19 @@ public class PrimaryOpMode extends CommandOpMode {
                 Constants.Drivetrain.blMotorName,
                 Constants.Drivetrain.brMotorName
         );
-        drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
-        register(drivetrain);
-        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorOneName, Constants.Shooter.rampMotorTwoName);
-        register(shooter);
         intake = new Intake(hardwareMap, Constants.Intake.intakeMotorName);
+        shooter = new Shooter(hardwareMap, Constants.Shooter.shooterMotorName, Constants.Shooter.rampMotorOneName, Constants.Shooter.rampMotorTwoName);
+
+        register(shooter);
+        register(drivetrain);
         register(intake);
+
         coOp.getGamepadButton(GamepadKeys.Button.A).whileHeld(
                 new RunShooter(shooter, Constants.Shooter.shooterSpeed, Constants.Shooter.rampSpeed));
         coOp.getGamepadButton(GamepadKeys.Button.B).whileHeld(
                 new RunIntake(intake, Constants.Intake.defaultSpeed));
+
+        drivetrain.setDefaultCommand(new UserDrive(drivetrain, driverOp));
+        schedule(drivetrain.getDefaultCommand());
     }
 }
